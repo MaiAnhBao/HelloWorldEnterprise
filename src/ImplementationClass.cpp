@@ -56,8 +56,8 @@ IPrintStrategy* HelloWorldImplementation::getPrintStrategy() {
 	return factory->createIPrintStrategy();
 }
 
-IStatusCode* HelloWorldImplementation::print(IPrintStrategy& strategy, IHelloWorldString& toPrint) {
-	IStatusCode* code = strategy.print(*toPrint);
+IStatusCode* HelloWorldImplementation::print(IPrintStrategy* strategy, IHelloWorldString* toPrint) {
+	IStatusCode* code = strategy->print(toPrint);
 	return code;
 }
 

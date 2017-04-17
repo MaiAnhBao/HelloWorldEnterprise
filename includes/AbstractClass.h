@@ -38,7 +38,7 @@ public:
 	virtual ~IHelloWorld() = default;
 	virtual IHelloWorldString* getHelloWorld() = 0;
 	virtual IPrintStrategy* getPrintStrategy() = 0;
-	virtual IStatusCode* print(IPrintStrategy& strategy, IHelloWorldString& toPrint) = 0;
+	virtual IStatusCode* print(IPrintStrategy* strategy, IHelloWorldString* toPrint) = 0;
 };
 
 } /* namespace Enterprise */

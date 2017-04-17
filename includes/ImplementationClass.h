@@ -43,7 +43,7 @@ class HelloWorldImplementation: public IHelloWorld {
 public:
 	IHelloWorldString* getHelloWorld();
 	IPrintStrategy* getPrintStrategy();
-	IStatusCode* print(IPrintStrategy& strategy, IHelloWorldString& toPrint);
+	IStatusCode* print(IPrintStrategy* strategy, IHelloWorldString* toPrint);
 };
 
 } /* namespace Enterprise */
